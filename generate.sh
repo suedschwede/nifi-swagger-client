@@ -1,0 +1,1 @@
+java -jar swagger-codegen-cli-2.2.2.jar generate -i swagger.json -l java -o swagger --group-id at.mic.nifi --artifact-id nifi-swagger-client --artifact-version 1.1.0 --api-package at.mic.nifi.swagger.client --model-package at.mic.nifi.swagger.client.model

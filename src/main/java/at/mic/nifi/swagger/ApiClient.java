@@ -494,7 +494,9 @@ public class ApiClient {
      * @param accessToken Access token
      */
     public void setAccessToken(String accessToken) {
+    	System.out.println("values " + authentications.values());
         for (Authentication auth : authentications.values()) {
+        	System.out.println("Token");
             if (auth instanceof OAuth) {
                 ((OAuth) auth).setAccessToken(accessToken);
                 return;
@@ -835,6 +837,8 @@ public class ApiClient {
             // ensuring a default content type
             contentType = "application/json";
         }
+        
+           
         if (isJsonMime(contentType)) {
             return json.deserialize(respBody, returnType);
         } else if (returnType.equals(String.class)) {
