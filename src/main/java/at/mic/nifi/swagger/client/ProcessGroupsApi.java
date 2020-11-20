@@ -4838,6 +4838,7 @@ public class ProcessGroupsApi {
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
+        
         if(progressListener != null) {
             apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
                 @Override
@@ -4903,6 +4904,7 @@ public class ProcessGroupsApi {
     public ApiResponse<TemplateEntity> uploadTemplateWithHttpInfo(String id, File template, Boolean body) throws ApiException {
         com.squareup.okhttp.Call call = uploadTemplateValidateBeforeCall(id, template, body, null, null);
         Type localVarReturnType = new TypeToken<TemplateEntity>(){}.getType();
+        
         return apiClient.execute(call, localVarReturnType);
     }
 
